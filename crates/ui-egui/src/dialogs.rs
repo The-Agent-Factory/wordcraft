@@ -1,4 +1,4 @@
-// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! Dialogs: Font, Paragraph, Find & Replace, Go To, Insert Table, Page Setup, Link, Bookmark,
 //! Word Count, Zoom, Watermark, New/Modify Style, Command search, About. Every dialog ends by
 //! running a command, so agents get the same result without the dialog.

@@ -1,4 +1,4 @@
-// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! File tab (Backstage): Home/New, Open, Info, Save As, Print, Export, Options, About.
 
 use egui::{Align2, Rect, Sense, Stroke, Ui, pos2, vec2};

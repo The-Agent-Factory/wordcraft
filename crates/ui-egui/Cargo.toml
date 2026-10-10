@@ -1,3 +1,4 @@
+# Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 [package]
 name = "wordcraft-ui-egui"
 version.workspace = true
@@ -21,6 +22,10 @@ serde_json = { workspace = true }
 log = { workspace = true }
 # The system's preferred interface languages (#8). Native: OS APIs; wasm: none (English).
 sys-locale = "0.3"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+# Claude Academy: the tools page passes `?lang=xx`; otherwise the browser's preferred languages.
+web-sys = { version = "0.3", features = ["Window", "Location", "Navigator"] }
 
 [dev-dependencies]
 egui_kittest = { workspace = true, features = ["wgpu", "snapshot"] }

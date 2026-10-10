@@ -1,4 +1,4 @@
-// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! WordCraft's egui front end: a Word-style window (title bar with Quick Access Toolbar, ribbon,
 //! rulers, page canvas, panes, status bar, Backstage, dialogs) over `wordcraft-engine`.
 //!

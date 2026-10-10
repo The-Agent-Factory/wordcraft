@@ -1,3 +1,4 @@
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! Interface languages (#8). Strings in the code stay English and are the lookup keys; a catalog
 //! per language (`*.tsv`, format in `zh-hans.tsv`) maps them to display text when the UI is drawn.
 //! Command ids, document text, file names, the control channel, the CLI and MCP never see
@@ -47,8 +48,10 @@ pub struct LangInfo {
 }
 
 /// The registry. English first: it is the fallback and the source language.
-pub static LANGUAGES: [LangInfo; 4] = [
+pub static LANGUAGES: [LangInfo; 5] = [
     LangInfo { code: "en", name: "English", source: "", prefer_hans: false, catalog: OnceLock::new() },
+    // French; every `fr-*` locale (`fr-CA`, `fr-FR`, `fr-BE` ...) resolves here. Catalog by Claude Academy.
+    LangInfo { code: "fr", name: "Français", source: include_str!("fr.tsv"), prefer_hans: false, catalog: OnceLock::new() },
     // Simplified Chinese; `zh`, `zh-CN`, `zh-SG` and `zh-Hans-*` resolve here (see `candidates`).
     LangInfo { code: "zh-hans", name: "简体中文", source: include_str!("zh-hans.tsv"), prefer_hans: true, catalog: OnceLock::new() },
     // Traditional Chinese (Taiwan vocabulary); `zh-TW`, `zh-HK`, `zh-MO` and `zh-Hant-*` resolve here.
@@ -180,8 +183,23 @@ fn detect_system_lang() -> Lang {
     if let Some(l) = std::env::var("WORDCRAFT_LANGUAGE").ok().and_then(|v| lang_from_tag(&v)) {
         return l;
     }
+    #[cfg(target_arch = "wasm32")]
+    let tags: Vec<String> = web_tags();
+    #[cfg(not(target_arch = "wasm32"))]
     let tags: Vec<String> = sys_locale::get_locales().take(16).collect();
     first_supported(tags.iter().map(String::as_str)).unwrap_or(Lang::EN)
+}
+
+/// Claude Academy: `?lang=xx` from the tools page first, then the browser's preferred languages.
+#[cfg(target_arch = "wasm32")]
+fn web_tags() -> Vec<String> {
+    let Some(win) = web_sys::window() else { return Vec::new() };
+    let mut tags: Vec<String> = Vec::new();
+    if let Ok(search) = win.location().search() {
+        tags.extend(search.trim_start_matches('?').split('&').filter_map(|kv| kv.strip_prefix("lang=")).map(str::to_owned));
+    }
+    tags.extend(win.navigator().languages().iter().filter_map(|v| v.as_string()));
+    tags
 }
 
 thread_local! {

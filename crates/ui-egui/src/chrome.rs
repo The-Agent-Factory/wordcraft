@@ -1,4 +1,4 @@
-// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! Title bar (Quick Access Toolbar, title, search, account) and status bar.
 
 use egui::{Align2, Rect, Sense, Stroke, Ui, pos2, vec2};

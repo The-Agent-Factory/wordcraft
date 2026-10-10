@@ -1,4 +1,4 @@
-# Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+# Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 # Simplified Chinese (zh-hans) interface catalog. Columns, separated by a TAB:
 #   context <TAB> English source <TAB> translation
 #   context    empty (WordCraft uses no contexts yet)

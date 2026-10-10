@@ -1,4 +1,4 @@
-// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! The browser shell: web `Services`, drag-and-drop, and the eframe web runner.
 
 use wasm_bindgen::JsCast as _;

@@ -1,4 +1,4 @@
-// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+// Modified by The Agent Factory for Claude Academy: rebranding and web language detection (see BRANDING.md).
 //! Built-in sample documents and templates (original text, generated in code).
 
 use wordcraft_doc::para::InlineObject;
