@@ -1,11 +1,12 @@
+# Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
 # Traditional Chinese (zh-hant, Taiwan vocabulary) interface catalog. Same format and clean-room
 # rules as zh-hans.tsv.
 
 	(no suggestions)	（無建議）
 	1.5 Line Spacing	1.5 倍行距
-	A free, open-source word processor written from scratch in Rust.\nPart of the Crafting Apps from the ArtCraft team.	一款以 Rust 從零開始撰寫的免費開源文書處理軟體。\n屬於 ArtCraft 團隊的 Crafting Apps 系列。
+	A free, open-source word processor written from scratch in Rust.	A free, open-source word processor written from scratch in Rust.
 	About	關於
-	About WordCraft	關於 WordCraft
+	About Atelier Write	About Atelier Write
 	Accept	接受
 	Accept All Changes	接受所有修訂
 	Accept This Change	接受此修訂
@@ -124,7 +125,7 @@
 	Comment	註解
 	Comments	註解
 	Comments Pane	註解窗格
-	Community\nDiscord	社群\nDiscord
+	Community	Community
 	Compact	緊密
 	Compare	比較
 	Compress Pictures	壓縮圖片
@@ -332,8 +333,8 @@
 	Inspect Document	檢查文件
 	Interface language:	介面語言：
 	Italic	斜體
-	Join the ArtCraft community on Discord	加入 Discord 上的 ArtCraft 社群
-	Join us on Discord: discord.gg/artcraft	在 Discord 上加入我們：discord.gg/artcraft
+	Join the Claude Academy community	Join the Claude Academy community
+	Claude Academy community	Claude Academy community
 	Justify	左右對齊
 	Keep Lines Together	段落中不分頁
 	Keep lines together	段落中不分頁
@@ -757,7 +758,7 @@
 	Word Left	左移一個單字
 	Word Right	右移一個單字
 	WordArt	文字藝術師
-	WordCraft	WordCraft
+	Atelier Write	Atelier Write
 	Words	字數
 	Words only	僅文字
 	Wrap Text	文繞圖

@@ -1,3 +1,4 @@
+// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
 //! WordCraft proofing.
 //!
 //! - **Spelling** against the public-domain Moby word list (~160k words, the same list that
@@ -113,7 +114,6 @@ const EXTRA: &[&str] = &[
     "podcasts",
     "hashtag",
     "wordcraft",
-    "artcraft",
     "discord",
     "github",
     "rust",

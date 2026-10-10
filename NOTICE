@@ -29,3 +29,11 @@ Rust dependencies (egui, eframe, vello_cpu, skrifa, harfrust, krilla, quick-xml,
 are permissively licensed (MIT/Apache-2.0/BSD/ISC/Zlib) and fetched through crates.io.
 
 No Microsoft, Adobe, Avid or Autodesk icons, images, templates or artwork are included.
+
+--------------------------------------------------------------------------------
+Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
+This modified version is published as "Atelier Write". It is based on WordCraft by the
+ArtCraft team (https://github.com/storytold/wordcraft). It is not an ArtCraft product and is not
+affiliated with or endorsed by the ArtCraft team, Adobe or Microsoft. The ArtCraft name and
+marks have been removed as required by docs/brand/LICENSE-brand.txt of the original project.
+All original copyright notices and the MIT and Apache-2.0 licenses are kept unchanged.

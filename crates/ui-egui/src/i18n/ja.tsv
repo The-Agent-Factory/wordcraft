@@ -1,10 +1,11 @@
+# Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
 # Japanese (ja) interface catalog. Same format and clean-room rules as zh-hans.tsv.
 
 	(no suggestions)	（候補なし）
 	1.5 Line Spacing	1.5 行
-	A free, open-source word processor written from scratch in Rust.\nPart of the Crafting Apps from the ArtCraft team.	Rust でゼロから書かれた、無料のオープンソース ワープロです。\nArtCraft チームの Crafting Apps のひとつです。
+	A free, open-source word processor written from scratch in Rust.	A free, open-source word processor written from scratch in Rust.
 	About	情報
-	About WordCraft	WordCraft について
+	About Atelier Write	About Atelier Write
 	Accept	承諾
 	Accept All Changes	すべての変更を承諾
 	Accept This Change	この変更を承諾
@@ -123,7 +124,7 @@
 	Comment	コメント
 	Comments	コメント
 	Comments Pane	コメント ウィンドウ
-	Community\nDiscord	コミュニティ\nDiscord
+	Community	Community
 	Compact	コンパクト
 	Compare	比較
 	Compress Pictures	図の圧縮
@@ -331,8 +332,8 @@
 	Inspect Document	ドキュメント検査
 	Interface language:	表示言語:
 	Italic	斜体
-	Join the ArtCraft community on Discord	Discord の ArtCraft コミュニティに参加
-	Join us on Discord: discord.gg/artcraft	Discord で参加: discord.gg/artcraft
+	Join the Claude Academy community	Join the Claude Academy community
+	Claude Academy community	Claude Academy community
 	Justify	両端揃え
 	Keep Lines Together	段落を分割しない
 	Keep lines together	段落を分割しない
@@ -756,7 +757,7 @@
 	Word Left	前の単語へ
 	Word Right	次の単語へ
 	WordArt	ワードアート
-	WordCraft	WordCraft
+	Atelier Write	Atelier Write
 	Words	単語数
 	Words only	単語のみ
 	Wrap Text	文字列の折り返し

@@ -1,3 +1,4 @@
+// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
 //! WordCraft's egui front end: a Word-style window (title bar with Quick Access Toolbar, ribbon,
 //! rulers, page canvas, panes, status bar, Backstage, dialogs) over `wordcraft-engine`.
 //!
@@ -294,7 +295,7 @@ impl WordApp {
                 json!({})
             }
             "ui.discord" => {
-                self.canvas.open_url = Some("https://discord.gg/artcraft".into());
+                self.canvas.open_url = Some("https://www.skool.com/claudeacademy".into());
                 json!({})
             }
             _ => return None,
@@ -447,7 +448,7 @@ impl WordApp {
         if let Some(url) = self.canvas.open_url.take() {
             ctx.open_url(egui::OpenUrl::new_tab(url));
         }
-        let title = format!("{}{} - WordCraft", self.title_stem(), if self.session.dirty { " •" } else { "" });
+        let title = format!("{}{} - Atelier Write", self.title_stem(), if self.session.dirty { " •" } else { "" });
         ctx.send_viewport_cmd(egui::ViewportCommand::Title(title));
         self.frame_ms = now_ms() - t0;
     }

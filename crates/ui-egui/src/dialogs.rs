@@ -1,3 +1,4 @@
+// Modified by The Agent Factory for Claude Academy: rebranding only (see BRANDING.md).
 //! Dialogs: Font, Paragraph, Find & Replace, Go To, Insert Table, Page Setup, Link, Bookmark,
 //! Word Count, Zoom, Watermark, New/Modify Style, Command search, About. Every dialog ends by
 //! running a command, so agents get the same result without the dialog.
@@ -286,7 +287,7 @@ pub fn show(app: &mut WordApp, ctx: &egui::Context) {
         Dialog::NewStyle { .. } => "Create New Style",
         Dialog::ModifyStyle { .. } => "Modify Style",
         Dialog::Commands { .. } => "Search Commands",
-        Dialog::About { .. } => "About WordCraft",
+        Dialog::About { .. } => "About Atelier Write",
     };
     egui::Window::new(tl!(title))
         .id(egui::Id::new(("dialog", title)))
@@ -722,15 +723,19 @@ fn body(app: &mut WordApp, ui: &mut Ui, d: &mut Dialog) -> bool {
                 1 => crate::credits::contributors_ui(ui),
                 2 => crate::credits::models_ui(ui),
                 _ => {
-                    ui.label(egui::RichText::new(tl!("WordCraft")).font(semibold(22.0)));
+                    ui.label(egui::RichText::new(tl!("Atelier Write")).font(semibold(22.0)));
                     let build = option_env!("WORDCRAFT_BUILD_SHA").map(|s| s.get(..8).unwrap_or(s)).unwrap_or(tl!("development build"));
                     ui.label(crate::i18n::fmt(tl!("Version {version} ({build})"), &[("version", env!("CARGO_PKG_VERSION")), ("build", build)]));
-                    ui.label(tl!(
-                        "A free, open-source word processor written from scratch in Rust.\nPart of the Crafting Apps from the ArtCraft team."
-                    ));
+                    ui.label(tl!("A free, open-source word processor written from scratch in Rust."));
+                    ui.label(egui::RichText::new(tl!("Free preview from Claude Academy.")).weak());
+                    ui.label(
+                        egui::RichText::new(tl!("Based on WordCraft by the ArtCraft team (github.com/storytold/wordcraft). Not affiliated with the ArtCraft team, Adobe or Microsoft."))
+                            .small()
+                            .weak(),
+                    );
                     ui.add_space(6.0);
-                    ui.hyperlink_to(tl!("getartcraft.com/apps/wordcraft"), "https://getartcraft.com/apps/wordcraft");
-                    ui.hyperlink_to(tl!("Join us on Discord: discord.gg/artcraft"), "https://discord.gg/artcraft");
+                    ui.hyperlink_to(tl!("Claude Academy website"), "https://claudeacademy.ca");
+                    ui.hyperlink_to(tl!("Claude Academy community"), "https://www.skool.com/claudeacademy");
                     ui.hyperlink_to(tl!("Source code: github.com/storytold/wordcraft"), "https://github.com/storytold/wordcraft");
                     ui.add_space(6.0);
                     ui.label(
